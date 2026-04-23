@@ -1,0 +1,133 @@
+/* ===== BACKGROUND ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, sky, #CA6180,);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== MAIN CARD ===== */
+.container {
+  
+  max-width: 850px;
+  margin-top: 30px;
+  background:#CA6180;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(137, 69, 69, 0.8);
+  color: black;
+}
+
+/* ===== TITLE ===== */
+h1 {
+  text-align: center;;
+  text-shadow: 0 0 15px BLACK;
+  margin-bottom: 20px;
+}
+
+/* ===== TIMER ===== */
+#timer {
+  background: BLACK;
+  border: 3px solid red;
+  border-radius: 50px;
+  padding: 10px 30px;
+  display: inline-block;
+  box-shadow: 0 0 20px red;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px red; }
+  50% { box-shadow: 0 0 25px red; }
+  100% { box-shadow: 0 0 10px red; }
+}
+
+/* ===== QUESTION BOX ===== */
+#question {
+  background: WHITE;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid BLACK;
+}
+
+/* ===== OPTIONS ===== */
+[id^="option-box-"] {
+  background: linear-gradient(145deg, sky skyblue);
+  color: #00c3ff;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover */
+[id^="option-box-"]:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg,skyblue, WHITE);
+  box-shadow: 0 0 12px #00c3ff;
+}
+
+/* Selected */
+.selected {
+  background: linear-gradient(145deg, #00416a, #00c3ff) !important;
+  box-shadow: 0 0 15px #00c3ff;
+}
+
+/* Correct */
+.correct {
+  background: linear-gradient(145deg, #11998e, #38ef7d) !important;
+  box-shadow: 0 0 15px #38ef7d;
+}
+
+/* Wrong */
+.wrong {
+  background: linear-gradient(145deg, #ff416c, #ff4b2b) !important;
+  box-shadow: 0 0 15px red;
+}
+
+/* ===== BUTTON ===== */
+#next-button {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#next-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff512f;
+}
+
+/* ===== SCORE ===== */
+.scor {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#scor-display {
+  color: #00ffd5;
+  text-shadow: 0 0 10px #00ffd5;
+}
+
+#pass-fail {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  #question {
+    font-size: 16px;
+  }
+}
